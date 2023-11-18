@@ -8,6 +8,19 @@
     tools:context=".WorkoutPlan">
 
     <ImageButton
+        android:id="@+id/back2"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <ImageButton
         android:id="@+id/lower"
         android:layout_width="393dp"
         android:layout_height="199dp"
@@ -33,6 +46,7 @@
         android:id="@+id/full"
         android:layout_width="393dp"
         android:layout_height="199dp"
+        android:background="#00000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

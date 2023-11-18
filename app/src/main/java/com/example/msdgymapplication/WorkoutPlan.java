@@ -11,6 +11,7 @@ public class WorkoutPlan extends AppCompatActivity {
     ImageButton Imagebutton3;
     ImageButton Imagebutton4;
     ImageButton Imagebutton5;
+    ImageButton backButton2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ public class WorkoutPlan extends AppCompatActivity {
         Imagebutton3 = (ImageButton) findViewById(R.id.full);
         Imagebutton4 = (ImageButton) findViewById(R.id.upper);
         Imagebutton5 = (ImageButton) findViewById(R.id.lower);
-
+        backButton2 = (ImageButton) findViewById(R.id.back2);
         Imagebutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {
@@ -40,6 +41,13 @@ public class WorkoutPlan extends AppCompatActivity {
             }
         });
 
+        backButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMainMenu();
+            }
+        });
+
     }
     public void openFullBody(){
         Intent intent4 = new Intent(this, FullBody.class);
@@ -54,6 +62,11 @@ public class WorkoutPlan extends AppCompatActivity {
     public void openLowerBody(){
         Intent intent6 = new Intent(this, LowerBody.class);
         startActivity(intent6);
+    }
+
+    public void openMainMenu(){
+        Intent intent7 = new Intent(this, MainMenu.class);
+        startActivity(intent7);
     }
 
 

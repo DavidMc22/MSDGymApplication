@@ -11,6 +11,7 @@ public class MainMenu extends AppCompatActivity {
  ImageButton imageButton;
  ImageButton imageButton1;
  ImageButton imageButton2;
+  ImageButton backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class MainMenu extends AppCompatActivity {
         imageButton = (ImageButton) findViewById(R.id.workout);
         imageButton1 = (ImageButton) findViewById(R.id.nutrition);
         imageButton2 = (ImageButton) findViewById(R.id.tracker);
+        backButton = (ImageButton) findViewById(R.id.back);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +40,13 @@ public class MainMenu extends AppCompatActivity {
                 openTracker();
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+        });
     }
     public void openWorkOut(){
         Intent intent1 = new Intent(this, WorkoutPlan.class);
@@ -52,5 +61,10 @@ public class MainMenu extends AppCompatActivity {
     public void openTracker(){
         Intent intent3 = new Intent(this, WorkoutTracker.class);
         startActivity(intent3);
+    }
+
+    public void openMainActivity(){
+        Intent intent4 = new Intent(this, MainActivity.class);
+        startActivity(intent4);
     }
 }
