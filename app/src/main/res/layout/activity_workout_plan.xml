@@ -4,15 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gymback"
     tools:context=".WorkoutPlan">
 
-    <TextView
-        android:id="@+id/workoutplan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Work Out Plan"
+    <ImageButton
+        android:id="@+id/lower"
+        android:layout_width="393dp"
+        android:layout_height="199dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.969"
+        app:srcCompat="@drawable/lowerbody" />
+
+    <ImageButton
+        android:id="@+id/upper"
+        android:layout_width="393dp"
+        android:layout_height="199dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@drawable/upperbody" />
+
+    <ImageButton
+        android:id="@+id/full"
+        android:layout_width="393dp"
+        android:layout_height="199dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067"
+        app:srcCompat="@drawable/fullbody" />
 </androidx.constraintlayout.widget.ConstraintLayout>
