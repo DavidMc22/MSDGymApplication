@@ -40,10 +40,10 @@ public class FullBody extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_body);
 
-        listView= findViewById(R.id.listview1);
-        lv2= findViewById(R.id.listView2);
-        lv3= findViewById(R.id.listview3);
-        lv4= findViewById(R.id.listview4);
+        listView= findViewById(R.id.listview7);
+        lv2= findViewById(R.id.listView8);
+        lv3= findViewById(R.id.listview9);
+        lv4= findViewById(R.id.listview10);
 
         ArrayAdapter Adapter = new ArrayAdapter<String>(
                 this,
