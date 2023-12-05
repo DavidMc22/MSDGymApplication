@@ -31,8 +31,8 @@ public class FullBody extends AppCompatActivity {
     };
 
     String[] FBLegs = {
-            "Hack squat\t\t\t\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10",
-            "Hamstring Curls\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10"
+            "Hack squat\t\t\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10",
+            "Hamstring Curls\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t\t8-10"
 
     };
     @Override
@@ -40,10 +40,10 @@ public class FullBody extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_body);
 
-        listView= findViewById(R.id.listview7);
-        lv2= findViewById(R.id.listView8);
-        lv3= findViewById(R.id.listview9);
-        lv4= findViewById(R.id.listview10);
+        listView= findViewById(R.id.listview11);
+        lv2= findViewById(R.id.listView12);
+        lv3= findViewById(R.id.listview13);
+        lv4= findViewById(R.id.listview14);
 
         ArrayAdapter Adapter = new ArrayAdapter<String>(
                 this,

@@ -41,10 +41,10 @@ public class UpperBody extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upper_body);
 
-        lv5= findViewById(R.id.listview7);
-        lv6= findViewById(R.id.listView8);
-        lv7= findViewById(R.id.listview9);
-        lv8= findViewById(R.id.listview10);
+        lv5= findViewById(R.id.listview11);
+        lv6= findViewById(R.id.listView12);
+        lv7= findViewById(R.id.listview13);
+        lv8= findViewById(R.id.listview14);
 
         ArrayAdapter Adapter5 = new ArrayAdapter<String>(
                 this,

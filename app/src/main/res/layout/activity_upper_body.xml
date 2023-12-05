@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.772" />
 
     <ListView
-        android:id="@+id/listview10"
+        android:id="@+id/listview14"
         android:layout_width="384dp"
         android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.901" />
 
     <ListView
-        android:id="@+id/listview9"
+        android:id="@+id/listview13"
         android:layout_width="384dp"
         android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <ListView
-        android:id="@+id/listView8"
+        android:id="@+id/listView12"
         android:layout_width="384dp"
         android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.421" />
 
     <ListView
-        android:id="@+id/listview7"
+        android:id="@+id/listview11"
         android:layout_width="384dp"
         android:layout_height="84dp"
         android:textSize="50dp"
