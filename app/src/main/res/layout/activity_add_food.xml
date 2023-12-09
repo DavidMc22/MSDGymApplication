@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1EDCF4"
+    tools:context=".AddFoodActivity">
+
+    <TextView
+        android:id="@+id/AddFood"
+        android:layout_width="239dp"
+        android:layout_height="25dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Add new food"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="378dp"
+        android:layout_height="339dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206">
+
+        <EditText
+            android:id="@+id/DayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Day"
+            android:textColor="#0E0E0E" />
+
+        <EditText
+            android:id="@+id/FoodNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="FoodName" />
+
+        <EditText
+            android:id="@+id/CaloriesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories" />
+
+        <EditText
+            android:id="@+id/ProteinText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Protein" />
+
+        <EditText
+            android:id="@+id/CarbsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carbs" />
+
+        <EditText
+            android:id="@+id/FatsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fats" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/AddFoodBtn"
+        android:layout_width="169dp"
+        android:layout_height="52dp"
+        android:text="Add Food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
