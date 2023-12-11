@@ -1,6 +1,7 @@
 package com.example.msdgymapplication;
 
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -15,11 +16,14 @@ public interface FoodDao {
     @Insert
     void insertAll(Food foods);
 
-    @Delete
-    void deleteAll(Food foods);
+    @Update
+    void update(Food food);
 
-    @Query("UPDATE food SET Day =:Day, FoodName =:FoodName, Protein =:Protein, Carbs =:Carbs, Fats =:Fats WHERE ID =:id")
-    void update(int id, String Day, float FoodName, float Protein, float Carbs, float Fats);
-    @Query("SELECT * From Food")
-    List<Food> getAllFoods();
+    @Delete
+    void delete(Food foods);
+
+    @Query("Delete from food")
+    void deleteAllFood();
+    @Query("SELECT * From food")
+    LiveData<List<Food>> getAllFoods();
 }

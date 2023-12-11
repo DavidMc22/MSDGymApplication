@@ -8,21 +8,21 @@ import androidx.room.PrimaryKey;
 public class Food {
     @PrimaryKey(autoGenerate = true)
     int ID =0;
-    @ColumnInfo(name = "Day")
+
     public String day;
 
-    @ColumnInfo(name = "FoodName")
+
     public String foodName;
 
-    @ColumnInfo(name = "Calories")
+
     public float calories;
-    @ColumnInfo(name = "Protein")
+
     public float protein;
 
-    @ColumnInfo(name = "Carbs")
+
     public float carbs;
 
-    @ColumnInfo(name = "Fats")
+
     public float fats;
 
     public Food(String day, String foodName, float calories, float protein, float carbs, float fats){
