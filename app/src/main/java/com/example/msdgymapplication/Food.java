@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
-//Creating Enititys for database
+//Creating Entity for database
 @Entity(tableName = "food")
 public class Food {
     @PrimaryKey(autoGenerate = true)

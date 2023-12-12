@@ -98,6 +98,7 @@ public class LowerBody extends AppCompatActivity {
 
     }
 
+    //openWorkout Method
     private void openWorkoutPlan() {
         Intent intent1 = new Intent(this, WorkoutPlan.class);
         startActivity(intent1);

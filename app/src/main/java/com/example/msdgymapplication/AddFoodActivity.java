@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class AddFoodActivity extends AppCompatActivity {
 
+    //Variables
     EditText day, name, cals, protein, carbs, fats;
     Button addBtn;
     FoodDao foodDao;
@@ -26,7 +27,7 @@ public class AddFoodActivity extends AppCompatActivity {
         fats = findViewById(R.id.FatsText);
         addBtn = findViewById(R.id.AddFoodBtn);
 
-        // Get the FoodDao instance from the database
+        // Getting the FoodDao instance from the current database
         foodDao = FoodDatabase.getInstance(this).foodDao();
 
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +39,7 @@ public class AddFoodActivity extends AppCompatActivity {
     }
 
     private void addFoodToDatabase() {
-        // Get data from the EditText fields
+        // Retrieving data from edit text
         String dayValue = day.getText().toString();
         String nameValue = name.getText().toString();
         float calsValue = Float.parseFloat(cals.getText().toString());
@@ -46,16 +47,16 @@ public class AddFoodActivity extends AppCompatActivity {
         float carbsValue = Float.parseFloat(carbs.getText().toString());
         float fatsValue = Float.parseFloat(fats.getText().toString());
 
-        // Create a new Food object
+        // Create a new food item
         Food newFood = new Food(dayValue, nameValue, calsValue, proteinValue, carbsValue, fatsValue);
 
-        // Insert the newFood object into the database
+        // Inserting new food into database
         foodDao.insertAll(newFood);
 
-        // Display a success message or handle the result as needed
-        Toast.makeText(AddFoodActivity.this, "Food added to database", Toast.LENGTH_SHORT).show();
+        // Display a message
+        Toast.makeText(AddFoodActivity.this, "Food added to the database", Toast.LENGTH_SHORT).show();
 
-        // Optionally, you can finish the activity or navigate to another screen
+        // finish activity
         finish();
     }
 }

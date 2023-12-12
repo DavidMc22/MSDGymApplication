@@ -96,3 +96,5 @@ public class MapLocation extends FragmentActivity implements OnMapReadyCallback 
         }
     }
 }
+
+

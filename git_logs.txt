@@ -1,0 +1,77 @@
+commit bc5ea835ef4e4986ea9db17586442880c179ad0a
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Tue Dec 12 09:45:58 2023 +0000
+
+    Final commit with comments
+
+commit a4c0145819936c9e268dd370f6e35d6f5f00f14b
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Tue Dec 12 08:56:36 2023 +0000
+
+    Added google maps activity to show current location
+
+commit 033fc990ea3cfe2a75968d75ddff53da6a42cf09
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Mon Dec 11 23:00:23 2023 +0000
+
+    Track Workout Finnished and still working on database
+
+commit 0a7e7f01c4c690ed74b503d6a5b26ed40cfa45d8
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Sat Dec 9 22:50:27 2023 +0000
+
+    Working on RoomDatabase
+
+commit eabe4f059e7022bd9871437d40f7b564c880f6a3
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Tue Dec 5 14:50:56 2023 +0000
+
+    LowerBodyWorkout Page
+
+commit 1b32803cf34b580ac13f51b6431655f14fd89db2
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Tue Dec 5 00:48:41 2023 +0000
+
+    UpperBodyWorkout Page
+
+commit 7b90b371f3a519c82322d60814fe4230e5461ae4
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Mon Dec 4 23:21:55 2023 +0000
+
+    FullBodyWorkout Page
+
+commit 86d2e44e0a4b75a1f5713d7954c467d9ab3fabf1
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Sat Nov 18 23:28:07 2023 +0000
+
+    Adding back buttons to each activity
+
+commit 645562460de480e8531df361a0a23b6eaa48ef44
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Sat Nov 18 00:54:55 2023 +0000
+
+    Added some more image buttons to workout activity
+
+commit 074be7d0f51c49a74a8d350a8dff260239440447
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Fri Nov 17 00:58:12 2023 +0000
+
+    Main menu designed with ImageButtons
+
+commit 6881263b824bc58180a111574faaac673a6fbdde
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Thu Nov 16 14:41:16 2023 +0000
+
+    Adding Logo and background to main page
+
+commit 4636cf48859f92701870c3c00c71800715451e10
+Author: Dave McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Thu Nov 16 13:57:08 2023 +0000
+
+    Added new Activitys and new Buttons
+
+commit a6a35f4b62d517a0f1695428c0eda34b512af632
+Author: Lee McCormack <leemccormack@Davids-MacBook-Pro.local>
+Date:   Tue Nov 14 18:36:17 2023 +0000
+
+    Initial commit

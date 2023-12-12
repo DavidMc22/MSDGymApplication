@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface FoodDao {
 
-    //Insert into databse
+    //Insert into database
     @Insert
     void insertAll(Food foods);
 
