@@ -15,7 +15,7 @@ public class UpperBody extends AppCompatActivity {
     ListView lv7;
     ListView lv8;
 
-    //Data to be used to display in list
+    //Data to be used to display in list using Arrays
     String[] UpperChest = {
             "Bench Press\t\t\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10",
             "Incline DB press\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10"

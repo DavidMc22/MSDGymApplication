@@ -1,52 +1,28 @@
 package com.example.msdgymapplication;
 
 import android.content.Context;
-import android.os.AsyncTask;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Food.class},version = 1)
+//Initializing Database
+@Database(entities = {Food.class}, version = 2)
 public abstract class FoodDatabase extends RoomDatabase {
-    private static FoodDatabase INSTANCE;
-    public abstract FoodDao FoodDao();
 
+    //Creating variables
+    private static FoodDatabase instance;
 
-    public static synchronized FoodDatabase getInstance(Context context){
-        if(INSTANCE==null){
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),FoodDatabase.class,"FoodDB")
-                    .addCallback(roomCallback)
+    public abstract FoodDao foodDao();
+
+    //Creating an Instance using Synchronized
+    public static synchronized FoodDatabase getInstance(Context context) {
+        if (instance == null) {
+            instance = Room.databaseBuilder(context.getApplicationContext(),
+                            FoodDatabase.class, "food_database")
                     .fallbackToDestructiveMigration()
                     .build();
         }
-        return INSTANCE;
+        return instance;
     }
-
-    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
-        @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-            super.onCreate(db);
-            new DatabaseAsyncTask(INSTANCE).execute();
-        }
-    };
-
-    private static class DatabaseAsyncTask extends AsyncTask<Void, Void, Void> {
-
-        private FoodDao foodDao;
-
-        private DatabaseAsyncTask(FoodDatabase db){
-
-            foodDao = db.FoodDao();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-
-            return null;
-        }
-    }
-
 }

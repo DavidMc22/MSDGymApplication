@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainMenu extends AppCompatActivity {
+
+    //Variables
  ImageButton imageButton;
  ImageButton imageButton1;
  ImageButton imageButton2;
@@ -16,10 +18,14 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        //Setting variable = to specific Ids
         imageButton = (ImageButton) findViewById(R.id.workout);
         imageButton1 = (ImageButton) findViewById(R.id.nutrition);
         imageButton2 = (ImageButton) findViewById(R.id.tracker);
         backButton = (ImageButton) findViewById(R.id.back);
+
+        //Using buttons with onClickListeners to open
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

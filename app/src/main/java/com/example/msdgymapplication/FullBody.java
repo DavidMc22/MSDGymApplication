@@ -8,12 +8,13 @@ import android.widget.ListView;
 
 public class FullBody extends AppCompatActivity {
 
+    //Variables
     ListView listView;
     ListView lv2;
     ListView lv3;
     ListView lv4;
 
-    //Data to be used to display in list
+    //Data to be used to display in list using arrays
     String[] FullBodyWorkout = {
             "Bench Press\t\t\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10",
             "Incline DB press\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10"
@@ -35,16 +36,19 @@ public class FullBody extends AppCompatActivity {
             "Hamstring Curls\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t\t8-10"
 
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_body);
 
+        //Setting variable = to specific Ids
         listView= findViewById(R.id.listview11);
         lv2= findViewById(R.id.listView12);
         lv3= findViewById(R.id.listview13);
         lv4= findViewById(R.id.listview14);
 
+        //Using adapter to list out each workout
         ArrayAdapter Adapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,

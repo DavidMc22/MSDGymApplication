@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -26,6 +27,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -38,6 +42,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.room:room-runtime:2.4.0")
     annotationProcessor("androidx.room:room-compiler:2.4.0")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
 
 }

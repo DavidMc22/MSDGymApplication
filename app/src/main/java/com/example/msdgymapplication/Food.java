@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+//Creating Enititys for database
 @Entity(tableName = "food")
 public class Food {
     @PrimaryKey(autoGenerate = true)
@@ -25,6 +27,7 @@ public class Food {
 
     public float fats;
 
+    //Constructor
     public Food(String day, String foodName, float calories, float protein, float carbs, float fats){
         this.day = day;
         this.foodName = foodName;
@@ -35,7 +38,7 @@ public class Food {
     }
 
 
-
+//Getters and setters
     public int getID() {
         return ID;
     }

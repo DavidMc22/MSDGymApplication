@@ -8,14 +8,14 @@ import android.widget.ListView;
 
 public class LowerBody extends AppCompatActivity {
 
-
+    //Variables
 
     ListView lv9;
     ListView lv10;
     ListView lv11;
     ListView lv12;
 
-    //Data to be used to display in list
+    //Data to be used to display in list using arrays
     String[] LowerQuads = {
             "Hack squat\t\t\t\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10",
             "Leg Extensions\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t3\t\t\t\t\t\t|\t\t\t\t8-10"
@@ -41,11 +41,13 @@ public class LowerBody extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lower_body);
 
+        //Setting variable = to specific Ids
         lv9= findViewById(R.id.listview11);
         lv10= findViewById(R.id.listView12);
         lv11= findViewById(R.id.listview13);
         lv12= findViewById(R.id.listview14);
 
+        //Using adapter to list out each workout
         ArrayAdapter Adapter5 = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,

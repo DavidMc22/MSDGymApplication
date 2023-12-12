@@ -1,53 +1,61 @@
 package com.example.msdgymapplication;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddFoodActivity extends AppCompatActivity {
 
-    private EditText Day_Text;
-    private EditText FoodName_Text;
-    private EditText Calories_Text;
-    private EditText Protein_Text;
-    private EditText Carbs_Text;
-    private EditText Fats_Text;
+    EditText day, name, cals, protein, carbs, fats;
+    Button addBtn;
+    FoodDao foodDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_food);
 
-        Day_Text = findViewById(R.id.DayText);
-        FoodName_Text = findViewById(R.id.FoodNameText);
-        Calories_Text = findViewById(R.id.CaloriesText);
-        Protein_Text = findViewById(R.id.ProteinText);
-        Carbs_Text = findViewById(R.id.CarbsText);
-        Fats_Text = findViewById(R.id.FatsText);
+        day = findViewById(R.id.DayText);
+        name = findViewById(R.id.FoodNameText);
+        cals = findViewById(R.id.CaloriesText);
+        protein = findViewById(R.id.ProteinText);
+        carbs = findViewById(R.id.CarbsText);
+        fats = findViewById(R.id.FatsText);
+        addBtn = findViewById(R.id.AddFoodBtn);
 
+        // Get the FoodDao instance from the database
+        foodDao = FoodDatabase.getInstance(this).foodDao();
 
-        setTitle("Add Food");
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addFoodToDatabase();
+            }
+        });
     }
 
-    private void saveFood() {
-        // Retrieve values from EditText fields
-        String day = Day_Text.getText().toString();
-        String foodName = FoodName_Text.getText().toString();
-        String calories = Calories_Text.getText().toString();
-        String protein = Protein_Text.getText().toString();
-        String carbs = Carbs_Text.getText().toString();
-        String fats = Fats_Text.getText().toString();
+    private void addFoodToDatabase() {
+        // Get data from the EditText fields
+        String dayValue = day.getText().toString();
+        String nameValue = name.getText().toString();
+        float calsValue = Float.parseFloat(cals.getText().toString());
+        float proteinValue = Float.parseFloat(protein.getText().toString());
+        float carbsValue = Float.parseFloat(carbs.getText().toString());
+        float fatsValue = Float.parseFloat(fats.getText().toString());
 
+        // Create a new Food object
+        Food newFood = new Food(dayValue, nameValue, calsValue, proteinValue, carbsValue, fatsValue);
+
+        // Insert the newFood object into the database
+        foodDao.insertAll(newFood);
+
+        // Display a success message or handle the result as needed
+        Toast.makeText(AddFoodActivity.this, "Food added to database", Toast.LENGTH_SHORT).show();
+
+        // Optionally, you can finish the activity or navigate to another screen
+        finish();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        return true;
-    }
-
-
-    }
-
+}
