@@ -49,6 +49,8 @@ public class WorkoutPlan extends AppCompatActivity {
         });
 
     }
+
+    //Methods used with intents to open pages
     public void openFullBody(){
         Intent intent4 = new Intent(this, FullBody.class);
         startActivity(intent4);

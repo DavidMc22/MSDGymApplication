@@ -2,8 +2,11 @@ package com.example.msdgymapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class UpperBody extends AppCompatActivity {
@@ -14,6 +17,8 @@ public class UpperBody extends AppCompatActivity {
     ListView lv6;
     ListView lv7;
     ListView lv8;
+
+    ImageButton backButton3;
 
     //Data to be used to display in list using Arrays
     String[] UpperChest = {
@@ -41,11 +46,22 @@ public class UpperBody extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upper_body);
 
+        //Setting variable = to specific Ids
         lv5= findViewById(R.id.listview11);
         lv6= findViewById(R.id.listView12);
         lv7= findViewById(R.id.listview13);
         lv8= findViewById(R.id.listview14);
+        backButton3 = (ImageButton) findViewById(R.id.back7);
 
+        backButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWorkoutPlan();
+            }
+        });
+
+
+        //Using adapter to list out each workout
         ArrayAdapter Adapter5 = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -78,5 +94,11 @@ public class UpperBody extends AppCompatActivity {
 
         lv8.setAdapter(Adapter8);
 
+    }
+
+    //Intent used to open WorkoutPlan page
+    private void openWorkoutPlan() {
+        Intent intent1 = new Intent(this, WorkoutPlan.class);
+        startActivity(intent1);
     }
 }

@@ -20,7 +20,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
+//References:
+//Used a youtube tutorial to help
+// Link : https://www.youtube.com/watch?v=XimcwP-OzFg
+//Also looked at lab 9
+
 public class MapLocation extends FragmentActivity implements OnMapReadyCallback {
+
+    //Variables
     private final int FINE_PERMISSION_CODE = 1;
     private GoogleMap mMap;
 
@@ -38,6 +45,7 @@ public class MapLocation extends FragmentActivity implements OnMapReadyCallback 
 
     }
 
+    //Method to get last location
     private void getLastKnownLocation() {
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -46,6 +54,8 @@ public class MapLocation extends FragmentActivity implements OnMapReadyCallback 
         }
 
         Task<Location> task = fusedLocationProviderClient.getLastLocation();
+
+        //On click Success listener used to gather current location.
         task.addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
@@ -63,6 +73,7 @@ public class MapLocation extends FragmentActivity implements OnMapReadyCallback 
         });
     }
 
+    //Method to display location on map
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;

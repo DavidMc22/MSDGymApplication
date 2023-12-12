@@ -25,7 +25,7 @@ public class MainMenu extends AppCompatActivity {
         imageButton2 = (ImageButton) findViewById(R.id.tracker);
         backButton = (ImageButton) findViewById(R.id.back);
 
-        //Using buttons with onClickListeners to open
+        //Using buttons with onClickListeners to open Pages
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +54,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
     }
+    //Using intents to start page activity's
     public void openWorkOut(){
         Intent intent1 = new Intent(this, WorkoutPlan.class);
         startActivity(intent1);

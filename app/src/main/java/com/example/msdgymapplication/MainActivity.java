@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Using an Intent to open the Location page
     public void openLocation(){
         Intent intent2 = new Intent(this,
                 MapLocation.class);

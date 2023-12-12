@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class WorkoutTracker extends AppCompatActivity {
-
+    ImageButton backButton2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +21,16 @@ public class WorkoutTracker extends AppCompatActivity {
         EditText weights = findViewById(R.id.weight);
         EditText rating1 = findViewById(R.id.rating);
         EditText rating2 =findViewById(R.id.rating2);
-
+        backButton2 = (ImageButton) findViewById(R.id.back3);
         Button savebtn = findViewById(R.id.saveButton);
 
+        backButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openMainMenu();
+            }
+        });
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,9 +53,11 @@ public class WorkoutTracker extends AppCompatActivity {
 
     }
 
-    public void openMainMenu2(){
+    //Intent used to open WorkoutPlan page
+    public void openMainMenu(){
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }
+
 
 }

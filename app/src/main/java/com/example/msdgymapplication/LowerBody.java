@@ -2,8 +2,11 @@ package com.example.msdgymapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class LowerBody extends AppCompatActivity {
@@ -14,6 +17,8 @@ public class LowerBody extends AppCompatActivity {
     ListView lv10;
     ListView lv11;
     ListView lv12;
+
+    ImageButton backButton2;
 
     //Data to be used to display in list using arrays
     String[] LowerQuads = {
@@ -46,6 +51,15 @@ public class LowerBody extends AppCompatActivity {
         lv10= findViewById(R.id.listView12);
         lv11= findViewById(R.id.listview13);
         lv12= findViewById(R.id.listview14);
+        backButton2 = (ImageButton) findViewById(R.id.back6);
+
+        backButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openWorkoutPlan();
+            }
+        });
 
         //Using adapter to list out each workout
         ArrayAdapter Adapter5 = new ArrayAdapter<String>(
@@ -80,5 +94,12 @@ public class LowerBody extends AppCompatActivity {
 
         lv12.setAdapter(Adapter8);
 
+
+
+    }
+
+    private void openWorkoutPlan() {
+        Intent intent1 = new Intent(this, WorkoutPlan.class);
+        startActivity(intent1);
     }
 }

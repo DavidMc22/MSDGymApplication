@@ -9,6 +9,8 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class NutritionPlan extends AppCompatActivity {
+
+    //Vsriables
     ImageButton backButton3;
     Button foodButton;
 
@@ -18,7 +20,7 @@ public class NutritionPlan extends AppCompatActivity {
         setContentView(R.layout.activity_nutrition_plan);
         foodButton = (Button) findViewById(R.id.foodbutton);
 
-
+        //Onclick used to open new activity
         foodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
